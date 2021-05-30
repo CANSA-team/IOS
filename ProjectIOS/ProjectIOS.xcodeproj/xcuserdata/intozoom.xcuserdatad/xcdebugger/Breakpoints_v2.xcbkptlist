@@ -1,0 +1,272 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Bucket
+   uuid = "60F777C7-485D-4CE1-A2BB-DE4A1C56A4B4"
+   type = "1"
+   version = "2.0">
+   <Breakpoints>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "571E8D1F-6EC7-4DAB-BE6B-AE535ACA21A7"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "ProjectIOS/ScreenQuestionController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "19"
+            endingLineNumber = "19"
+            landmarkName = "viewDidLoad()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "C6B3FC9E-1564-4E41-8A2A-7DEE96099127"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "ProjectIOS/ScreenQuestionController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "47"
+            endingLineNumber = "47"
+            landmarkName = "collectionView(_:layout:referenceSizeForHeaderInSection:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "37301C45-ED58-46F9-AA0F-E62527F4C71D"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "ProjectIOS/ScreenResultControllerCollectionViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "16"
+            endingLineNumber = "16"
+            landmarkName = "ScreenResultControllerCollectionViewController"
+            landmarkType = "3">
+            <Locations>
+               <Location
+                  uuid = "37301C45-ED58-46F9-AA0F-E62527F4C71D - da3907a86877a031"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "ProjectIOS.ScreenResultControllerCollectionViewController.collectionView.getter : Swift.Optional&lt;__C.UICollectionView&gt;"
+                  moduleName = "ProjectIOS"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/intozoom/Desktop/ProjectIOS/ProjectIOS/ScreenResultControllerCollectionViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "16"
+                  endingLineNumber = "16"
+                  offsetFromSymbolStart = "88">
+               </Location>
+               <Location
+                  uuid = "37301C45-ED58-46F9-AA0F-E62527F4C71D - ea91f69584b954cd"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "ProjectIOS.ScreenResultControllerCollectionViewController.collectionView.setter : Swift.Optional&lt;__C.UICollectionView&gt;"
+                  moduleName = "ProjectIOS"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/intozoom/Desktop/ProjectIOS/ProjectIOS/ScreenResultControllerCollectionViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "16"
+                  endingLineNumber = "16"
+                  offsetFromSymbolStart = "155">
+               </Location>
+               <Location
+                  uuid = "37301C45-ED58-46F9-AA0F-E62527F4C71D - 9b99c8b52cb9dc31"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "ProjectIOS.ScreenResultControllerCollectionViewController.collectionView.modify : Swift.Optional&lt;__C.UICollectionView&gt;"
+                  moduleName = "ProjectIOS"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/intozoom/Desktop/ProjectIOS/ProjectIOS/ScreenResultControllerCollectionViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "0"
+                  endingLineNumber = "0"
+                  offsetFromSymbolStart = "44">
+               </Location>
+               <Location
+                  uuid = "37301C45-ED58-46F9-AA0F-E62527F4C71D - 8487e042b2b1d321"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "ProjectIOS.ScreenResultControllerCollectionViewController.collectionView.modify : Swift.Optional&lt;__C.UICollectionView&gt; with unmangled suffix &quot;.resume.0&quot;"
+                  moduleName = "ProjectIOS"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/intozoom/Desktop/ProjectIOS/ProjectIOS/ScreenResultControllerCollectionViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "16"
+                  endingLineNumber = "16"
+                  offsetFromSymbolStart = "36">
+               </Location>
+               <Location
+                  uuid = "37301C45-ED58-46F9-AA0F-E62527F4C71D - a47e979d94b81c90"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "ProjectIOS.ScreenResultControllerCollectionViewController.init(nibName: Swift.Optional&lt;Swift.String&gt;, bundle: Swift.Optional&lt;__C.NSBundle&gt;) -&gt; ProjectIOS.ScreenResultControllerCollectionViewController"
+                  moduleName = "ProjectIOS"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/intozoom/Desktop/ProjectIOS/ProjectIOS/ScreenResultControllerCollectionViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "16"
+                  endingLineNumber = "16"
+                  offsetFromSymbolStart = "643">
+               </Location>
+               <Location
+                  uuid = "37301C45-ED58-46F9-AA0F-E62527F4C71D - 1c0002045d7464d9"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "ProjectIOS.ScreenResultControllerCollectionViewController.init(coder: __C.NSCoder) -&gt; Swift.Optional&lt;ProjectIOS.ScreenResultControllerCollectionViewController&gt;"
+                  moduleName = "ProjectIOS"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/intozoom/Desktop/ProjectIOS/ProjectIOS/ScreenResultControllerCollectionViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "16"
+                  endingLineNumber = "16"
+                  offsetFromSymbolStart = "593">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "95259346-D924-4C2A-898E-425943CAFF50"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "ProjectIOS/ScreenResultControllerCollectionViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "18"
+            endingLineNumber = "18"
+            landmarkName = "viewDidLoad()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "DF28A6B1-889C-4052-9CDD-651AC640F2F2"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "ProjectIOS/ScreenResultControllerCollectionViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "15"
+            endingLineNumber = "15"
+            landmarkName = "ScreenResultControllerCollectionViewController"
+            landmarkType = "3">
+            <Locations>
+               <Location
+                  uuid = "DF28A6B1-889C-4052-9CDD-651AC640F2F2 - da3907a86877a031"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "ProjectIOS.ScreenResultControllerCollectionViewController.collectionView.getter : Swift.Optional&lt;__C.UICollectionView&gt;"
+                  moduleName = "ProjectIOS"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/intozoom/Desktop/ProjectIOS/ProjectIOS/ScreenResultControllerCollectionViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "16"
+                  endingLineNumber = "16"
+                  offsetFromSymbolStart = "88">
+               </Location>
+               <Location
+                  uuid = "DF28A6B1-889C-4052-9CDD-651AC640F2F2 - ea91f69584b954cd"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "ProjectIOS.ScreenResultControllerCollectionViewController.collectionView.setter : Swift.Optional&lt;__C.UICollectionView&gt;"
+                  moduleName = "ProjectIOS"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/intozoom/Desktop/ProjectIOS/ProjectIOS/ScreenResultControllerCollectionViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "16"
+                  endingLineNumber = "16"
+                  offsetFromSymbolStart = "155">
+               </Location>
+               <Location
+                  uuid = "DF28A6B1-889C-4052-9CDD-651AC640F2F2 - 9b99c8b52cb9dc31"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "ProjectIOS.ScreenResultControllerCollectionViewController.collectionView.modify : Swift.Optional&lt;__C.UICollectionView&gt;"
+                  moduleName = "ProjectIOS"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/intozoom/Desktop/ProjectIOS/ProjectIOS/ScreenResultControllerCollectionViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "0"
+                  endingLineNumber = "0"
+                  offsetFromSymbolStart = "44">
+               </Location>
+               <Location
+                  uuid = "DF28A6B1-889C-4052-9CDD-651AC640F2F2 - 8487e042b2b1d321"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "ProjectIOS.ScreenResultControllerCollectionViewController.collectionView.modify : Swift.Optional&lt;__C.UICollectionView&gt; with unmangled suffix &quot;.resume.0&quot;"
+                  moduleName = "ProjectIOS"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/intozoom/Desktop/ProjectIOS/ProjectIOS/ScreenResultControllerCollectionViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "16"
+                  endingLineNumber = "16"
+                  offsetFromSymbolStart = "36">
+               </Location>
+               <Location
+                  uuid = "DF28A6B1-889C-4052-9CDD-651AC640F2F2 - a47e979d94b81c90"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "ProjectIOS.ScreenResultControllerCollectionViewController.init(nibName: Swift.Optional&lt;Swift.String&gt;, bundle: Swift.Optional&lt;__C.NSBundle&gt;) -&gt; ProjectIOS.ScreenResultControllerCollectionViewController"
+                  moduleName = "ProjectIOS"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/intozoom/Desktop/ProjectIOS/ProjectIOS/ScreenResultControllerCollectionViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "16"
+                  endingLineNumber = "16"
+                  offsetFromSymbolStart = "643">
+               </Location>
+               <Location
+                  uuid = "DF28A6B1-889C-4052-9CDD-651AC640F2F2 - 1c0002045d7464d9"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "ProjectIOS.ScreenResultControllerCollectionViewController.init(coder: __C.NSCoder) -&gt; Swift.Optional&lt;ProjectIOS.ScreenResultControllerCollectionViewController&gt;"
+                  moduleName = "ProjectIOS"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/intozoom/Desktop/ProjectIOS/ProjectIOS/ScreenResultControllerCollectionViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "16"
+                  endingLineNumber = "16"
+                  offsetFromSymbolStart = "593">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+   </Breakpoints>
+</Bucket>
