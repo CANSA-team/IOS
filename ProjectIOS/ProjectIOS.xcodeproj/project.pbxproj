@@ -17,6 +17,7 @@
 		7E4294BF2629CF6300A22CD5 /* HinhAnh.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E4294BE2629CF6300A22CD5 /* HinhAnh.swift */; };
 		8C63CE96266214DA00CC6745 /* QuestionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C63CE95266214DA00CC6745 /* QuestionView.swift */; };
 		8C63CE9826622CCB00CC6745 /* ScreenResultControllerCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C63CE9726622CCB00CC6745 /* ScreenResultControllerCollectionViewController.swift */; };
+		8C652FD1266CB7F50076F715 /* ResultView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C652FD0266CB7F50076F715 /* ResultView.swift */; };
 		8C815E13266176A80095A7ED /* DataPassing.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C815E12266176A80095A7ED /* DataPassing.swift */; };
 		8C815E15266176CF0095A7ED /* ScreenMainController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C815E14266176CE0095A7ED /* ScreenMainController.swift */; };
 		8C815E17266176F40095A7ED /* ScreenQuestionController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C815E16266176F40095A7ED /* ScreenQuestionController.swift */; };
@@ -58,6 +59,7 @@
 		7E4294BE2629CF6300A22CD5 /* HinhAnh.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HinhAnh.swift; sourceTree = "<group>"; };
 		8C63CE95266214DA00CC6745 /* QuestionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionView.swift; sourceTree = "<group>"; };
 		8C63CE9726622CCB00CC6745 /* ScreenResultControllerCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScreenResultControllerCollectionViewController.swift; sourceTree = "<group>"; };
+		8C652FD0266CB7F50076F715 /* ResultView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultView.swift; sourceTree = "<group>"; };
 		8C815E12266176A80095A7ED /* DataPassing.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataPassing.swift; sourceTree = "<group>"; };
 		8C815E14266176CE0095A7ED /* ScreenMainController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScreenMainController.swift; sourceTree = "<group>"; };
 		8C815E16266176F40095A7ED /* ScreenQuestionController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScreenQuestionController.swift; sourceTree = "<group>"; };
@@ -169,6 +171,7 @@
 				8C815E18266177110095A7ED /* CollectionViewCell.swift */,
 				8C63CE95266214DA00CC6745 /* QuestionView.swift */,
 				8C63CE9726622CCB00CC6745 /* ScreenResultControllerCollectionViewController.swift */,
+				8C652FD0266CB7F50076F715 /* ResultView.swift */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -313,6 +316,7 @@
 			files = (
 				7E4294B72629CF4D00A22CD5 /* CauHoi.swift in Sources */,
 				8C63CE9826622CCB00CC6745 /* ScreenResultControllerCollectionViewController.swift in Sources */,
+				8C652FD1266CB7F50076F715 /* ResultView.swift in Sources */,
 				8C815E17266176F40095A7ED /* ScreenQuestionController.swift in Sources */,
 				8C815E19266177110095A7ED /* CollectionViewCell.swift in Sources */,
 				7E4294822629CEB200A22CD5 /* AppDelegate.swift in Sources */,

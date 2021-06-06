@@ -9,8 +9,8 @@ import UIKit
 
 
 
-class ScreenResultControllerCollectionViewController: UIViewController,UICollectionViewDataSource,UICollectionViewDelegate{
-    private let data:[String] = ["A1","A2","A3","B1","B2","B3","D1","D1","D3","F1","F2"]
+class ScreenResultControllerCollectionViewController: UIViewController,UICollectionViewDataSource,UICollectionViewDelegate,UICollectionViewDelegateFlowLayout{
+    private let data:[String] = ["1","2","3","4","5","6","7","8","9","10","11"]
     private let result:[Int] = [0,1,0,1,0,1,0,0,0,1,1]
 
     @IBOutlet weak var collectionView: UICollectionView!
@@ -19,7 +19,11 @@ class ScreenResultControllerCollectionViewController: UIViewController,UICollect
         // Do any additional setup after loading the view.
         // Create your custom collectionView.
         collectionView.dataSource = self
-
+        collectionView.delegate = self
+        
+    }
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        return data.count
     }
     func collectionView(_ collectionView: UICollectionView, viewForSupplementaryElementOfKind kind: String, at indexPath: IndexPath) -> UICollectionReusableView {
        
@@ -27,11 +31,8 @@ class ScreenResultControllerCollectionViewController: UIViewController,UICollect
 
             case UICollectionView.elementKindSectionHeader:
 
-                let headerView = collectionView.dequeueReusableSupplementaryView(ofKind: kind, withReuseIdentifier: "header", for: indexPath) 
-
-                headerView.layer.borderColor = UIColor.black.cgColor
-                headerView.layer.borderWidth = 1
-                
+                let headerView = collectionView.dequeueReusableSupplementaryView(ofKind: kind, withReuseIdentifier: "header", for: indexPath) as! ResultView
+                headerView.setResult(with: "Dau", with: "5/25")
                 return headerView
 
             default:
@@ -39,9 +40,6 @@ class ScreenResultControllerCollectionViewController: UIViewController,UICollect
                 assert(false, "Unexpected element kind")
             }
         return UICollectionReusableView()
-    }
-    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return data.count
     }
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
             let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "CollectionViewCell", for: indexPath) as! CollectionViewCell

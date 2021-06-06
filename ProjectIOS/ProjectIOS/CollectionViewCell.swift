@@ -24,10 +24,9 @@ class CollectionViewCell: UICollectionViewCell {
             LableResult.backgroundColor = .red
         }
     }
-    func configButton(with str : String){
-        btnContent.titleLabel?.lineBreakMode = .byWordWrapping
-        btnContent.titleLabel?.textAlignment = .center
+    func configButton(with str : String,with img:String){
         btnContent.setTitle(str, for: .normal)
+        btnContent.setImage(UIImage(named: img), for: .normal)
         btnContent.addTarget(self,action: #selector(didPressButton(sender:)), for: .touchUpInside)
     }
     func ConfigQuestion(with str:String) {

@@ -11,9 +11,9 @@ class QuestionView: UICollectionReusableView {
     @IBOutlet weak var image: UIImageView!
     @IBOutlet weak var Question: UILabel!
     
-    func SetQuestion(with str:String){
+    func SetQuestion(with str:String,with img:String){
         Question.text = str
-        image.image = UIImage(named: "495")
+        image.image = UIImage(named: img)
     }
     
 }

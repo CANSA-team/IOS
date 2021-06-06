@@ -8,7 +8,7 @@
 import UIKit
 
 class ScreenQuestionController: UIViewController,UICollectionViewDataSource,UICollectionViewDelegate,UICollectionViewDelegateFlowLayout {
-    private let data:[String] = ["A1","A2","A3","B1","B2","B3jsdvohdbsoghoihgdishgpisd"]
+    private let data:[String] = ["Xăng","Nước lã","Dầu hỏa","Cần Sa"]
     
     @IBOutlet weak var collectionView: UICollectionView!
     override func viewDidLoad() {
@@ -17,7 +17,13 @@ class ScreenQuestionController: UIViewController,UICollectionViewDataSource,UICo
         // Create your custom collectionView.
         collectionView.dataSource = self
         collectionView.delegate = self
-
+        self.title = "1/25"
+        let time = UIBarButtonItem(title: "Time 25:25",
+                                       style: .done,
+                                           target: nil,
+                                           action: nil)
+            time.isEnabled = true
+        navigationItem.rightBarButtonItem = time
     }
     //Set Header
     func collectionView(_ collectionView: UICollectionView, viewForSupplementaryElementOfKind kind: String, at indexPath: IndexPath) -> UICollectionReusableView {
@@ -27,10 +33,7 @@ class ScreenQuestionController: UIViewController,UICollectionViewDataSource,UICo
             case UICollectionView.elementKindSectionHeader:
 
                 let headerView = collectionView.dequeueReusableSupplementaryView(ofKind: kind, withReuseIdentifier: "header", for: indexPath) as! QuestionView
-
-                headerView.layer.borderColor = UIColor.black.cgColor
-                headerView.layer.borderWidth = 1
-                headerView.SetQuestion(with: "123")
+                headerView.SetQuestion(with: "Cau Hoi 1: Xe may chay bang gi hay hoi can sa team nha moi nguoi?",with: "A1") //Set Cau hoi
                 return headerView
 
             case UICollectionView.elementKindSectionFooter:
@@ -52,7 +55,7 @@ class ScreenQuestionController: UIViewController,UICollectionViewDataSource,UICo
 
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, referenceSizeForFooterInSection section: Int) -> CGSize {
         let width = view.frame.size.width - 22
-        return CGSize(width: width - 16, height: 50)
+        return CGSize(width: width - 16, height: 100)
     }
     
   
