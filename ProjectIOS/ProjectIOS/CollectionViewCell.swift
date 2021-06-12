@@ -14,20 +14,23 @@ class CollectionViewCell: UICollectionViewCell {
     @IBOutlet weak var QuestionButton: UIButton!
     @IBOutlet weak var LableQuestion: UILabel!
     
-    @IBOutlet weak var LableResult: UILabel!
+    @IBOutlet weak var checkResult: UIButton!
     
     func result(with str:String,with check:Int){
-        LableResult.text = str
+        checkResult.setTitle(str, for: .normal)
         if (check == 1){
-            LableResult.backgroundColor = .green
+            checkResult.setImage(UIImage(named: "true"), for: .normal)
+
         }else{
-            LableResult.backgroundColor = .red
+            checkResult.setImage(UIImage(named: "false"), for: .normal)
+
         }
     }
     func configButton(with str : String,with img:String){
         btnContent.setTitle(str, for: .normal)
         btnContent.setImage(UIImage(named: img), for: .normal)
         btnContent.addTarget(self,action: #selector(didPressButton(sender:)), for: .touchUpInside)
+        
     }
     func ConfigQuestion(with str:String) {
         LableQuestion.text = str

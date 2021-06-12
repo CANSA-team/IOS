@@ -7,13 +7,14 @@
 
 import UIKit
 
-class QuestionView: UICollectionReusableView {
+class QuestionView: UICollectionReusableView{
     @IBOutlet weak var image: UIImageView!
     @IBOutlet weak var Question: UILabel!
     
+
     func SetQuestion(with str:String,with img:String){
-        Question.text = str
-        image.image = UIImage(named: img)
+        self.Question.text = str
+        self.image.image = UIImage(named: img)
     }
     
 }

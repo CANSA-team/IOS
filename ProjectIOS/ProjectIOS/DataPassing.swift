@@ -11,6 +11,8 @@ class DataPassing{
     static let shared = DataPassing()
     var loaiBang:String?
     var allButtons = [UIButton]()
+    var collectionView:UICollectionView?
+    var count = 0
     
 }
 

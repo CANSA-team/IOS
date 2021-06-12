@@ -15,4 +15,5 @@ class ResultView: UICollectionReusableView {
         resultView.text = result
         trueView.text = trueAwe
     }
+    
 }

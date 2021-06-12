@@ -49,5 +49,6 @@ class ScreenMainController: UIViewController,UICollectionViewDataSource,UICollec
         let width = view.frame.size.width - 22
         return CGSize(width: width - 16, height: 200)
     }
+    
 }
 

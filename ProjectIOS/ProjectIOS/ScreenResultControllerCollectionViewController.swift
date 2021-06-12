@@ -21,6 +21,19 @@ class ScreenResultControllerCollectionViewController: UIViewController,UICollect
         collectionView.dataSource = self
         collectionView.delegate = self
         
+        let layout = collectionView.collectionViewLayout as? UICollectionViewFlowLayout // casting is required because UICollectionViewLayout doesn't offer header pin. Its feature of UICollectionViewFlowLayout
+        layout?.sectionHeadersPinToVisibleBounds = true
+        layout?.sectionFootersPinToVisibleBounds = true
+        
+    }
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        navigationController?.setNavigationBarHidden(true, animated: animated)
+    }
+
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        navigationController?.setNavigationBarHidden(false, animated: animated)
     }
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return data.count
@@ -34,7 +47,10 @@ class ScreenResultControllerCollectionViewController: UIViewController,UICollect
                 let headerView = collectionView.dequeueReusableSupplementaryView(ofKind: kind, withReuseIdentifier: "header", for: indexPath) as! ResultView
                 headerView.setResult(with: "Dau", with: "5/25")
                 return headerView
-
+        case UICollectionView.elementKindSectionFooter:
+            let footerView = collectionView.dequeueReusableSupplementaryView(ofKind: kind, withReuseIdentifier: "footer", for: indexPath)
+            
+            return footerView
             default:
 
                 assert(false, "Unexpected element kind")
@@ -47,7 +63,7 @@ class ScreenResultControllerCollectionViewController: UIViewController,UICollect
         cell.layer.borderColor = UIColor.black.cgColor
         cell.layer.borderWidth = 1
         cell.layer.cornerRadius = 8
-        cell.layer.backgroundColor = #colorLiteral(red: 0.4392156899, green: 0.01176470611, blue: 0.1921568662, alpha: 1)
+        
         return cell
         }
 }

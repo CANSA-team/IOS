@@ -15,6 +15,7 @@
 		7E4294A42629CEBF00A22CD5 /* ProjectIOSUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E4294A32629CEBF00A22CD5 /* ProjectIOSUITests.swift */; };
 		7E4294B72629CF4D00A22CD5 /* CauHoi.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E4294B62629CF4D00A22CD5 /* CauHoi.swift */; };
 		7E4294BF2629CF6300A22CD5 /* HinhAnh.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E4294BE2629CF6300A22CD5 /* HinhAnh.swift */; };
+		8C61EE892674F60E006C00BE /* CauHoiData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C61EE882674F60E006C00BE /* CauHoiData.swift */; };
 		8C63CE96266214DA00CC6745 /* QuestionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C63CE95266214DA00CC6745 /* QuestionView.swift */; };
 		8C63CE9826622CCB00CC6745 /* ScreenResultControllerCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C63CE9726622CCB00CC6745 /* ScreenResultControllerCollectionViewController.swift */; };
 		8C652FD1266CB7F50076F715 /* ResultView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C652FD0266CB7F50076F715 /* ResultView.swift */; };
@@ -57,6 +58,7 @@
 		7E4294A52629CEBF00A22CD5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		7E4294B62629CF4D00A22CD5 /* CauHoi.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CauHoi.swift; sourceTree = "<group>"; };
 		7E4294BE2629CF6300A22CD5 /* HinhAnh.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HinhAnh.swift; sourceTree = "<group>"; };
+		8C61EE882674F60E006C00BE /* CauHoiData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CauHoiData.swift; sourceTree = "<group>"; };
 		8C63CE95266214DA00CC6745 /* QuestionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionView.swift; sourceTree = "<group>"; };
 		8C63CE9726622CCB00CC6745 /* ScreenResultControllerCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScreenResultControllerCollectionViewController.swift; sourceTree = "<group>"; };
 		8C652FD0266CB7F50076F715 /* ResultView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultView.swift; sourceTree = "<group>"; };
@@ -172,6 +174,7 @@
 				8C63CE95266214DA00CC6745 /* QuestionView.swift */,
 				8C63CE9726622CCB00CC6745 /* ScreenResultControllerCollectionViewController.swift */,
 				8C652FD0266CB7F50076F715 /* ResultView.swift */,
+				8C61EE882674F60E006C00BE /* CauHoiData.swift */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -316,6 +319,7 @@
 			files = (
 				7E4294B72629CF4D00A22CD5 /* CauHoi.swift in Sources */,
 				8C63CE9826622CCB00CC6745 /* ScreenResultControllerCollectionViewController.swift in Sources */,
+				8C61EE892674F60E006C00BE /* CauHoiData.swift in Sources */,
 				8C652FD1266CB7F50076F715 /* ResultView.swift in Sources */,
 				8C815E17266176F40095A7ED /* ScreenQuestionController.swift in Sources */,
 				8C815E19266177110095A7ED /* CollectionViewCell.swift in Sources */,
