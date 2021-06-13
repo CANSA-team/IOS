@@ -2,7 +2,7 @@
 //  ScreenQuestionController.swift
 //  ProjectIOS
 //
-//  Created by intozoom on 5/28/21.
+//  Created by Hoàng Anh on 5/28/21.
 //
 
 import UIKit
@@ -42,13 +42,13 @@ class ScreenQuestionController: UIViewController,UICollectionViewDataSource,UICo
     
     @IBAction func btnLeft(_ sender: Any) {
         //Sukien Click
+        //Khi Click nó sẽ load lại storyBoard chỉ cần mỗi lần thay đổi DataPassing nó sẽ đổi toàn bộ
         if(DataPassing.shared.count<=0){
             DataPassing.shared.count = 0
         }else{
             DataPassing.shared.count -= 1
             viewDidLoad()
         }
-
     }
     
     @IBAction func btnRight(_ sender: Any) {
