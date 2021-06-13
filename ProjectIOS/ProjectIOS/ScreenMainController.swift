@@ -2,15 +2,15 @@
 //  ScreenMainController.swift
 //  ProjectIOS
 //
-//  Created by intozoom on 5/28/21.
+//  Created by Hoàng Anh on 5/28/21.
 //
 
 import UIKit
 import Firebase
 
 class ScreenMainController: UIViewController,UICollectionViewDataSource,UICollectionViewDelegate{
-    private let data:[String] = ["A1","A2","A3","B1","B2","B3","D","E","F"]
-    private let img:[String] = ["A1","A2","A3","B1","B2","B3","D","E","F"]
+    private let data:[String] = ["A1","A2","A3","B1","B2","B3","D","E","F"] //Các loại bằng đổ ra main 
+    private let img:[String] = ["A1","A2","A3","B1","B2","B3","D","E","F"] //Đây là Hình Ảnh của các button
     @IBOutlet weak var collectionView: UICollectionView!
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -22,7 +22,7 @@ class ScreenMainController: UIViewController,UICollectionViewDataSource,UICollec
         // Create your custom collectionView.
         collectionView.dataSource = self
         collectionView.delegate = self
-        self.view.backgroundColor = .purple
+        self.view.backgroundColor = .purple //Set background của Main
     }
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return data.count
@@ -35,6 +35,7 @@ class ScreenMainController: UIViewController,UICollectionViewDataSource,UICollec
         cell.layer.cornerRadius = 8
         return cell
         }
+    //Set header
     func collectionView(_ collectionView: UICollectionView, viewForSupplementaryElementOfKind kind: String, at indexPath: IndexPath) -> UICollectionReusableView {
        
         switch kind {
