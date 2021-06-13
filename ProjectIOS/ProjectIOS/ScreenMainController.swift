@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import Firebase
 
 class ScreenMainController: UIViewController,UICollectionViewDataSource,UICollectionViewDelegate{
     private let data:[String] = ["A1","A2","A3","B1","B2","B3","D","E","F"]
@@ -13,6 +14,10 @@ class ScreenMainController: UIViewController,UICollectionViewDataSource,UICollec
     @IBOutlet weak var collectionView: UICollectionView!
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        var ref: DatabaseReference!
+        ref = Database.database().reference(withPath: "hello")
+        ref.setValue("World");
         // Do any additional setup after loading the view.
         // Create your custom collectionView.
         collectionView.dataSource = self

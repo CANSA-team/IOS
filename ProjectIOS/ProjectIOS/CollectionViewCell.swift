@@ -41,6 +41,8 @@ class CollectionViewCell: UICollectionViewCell {
     @objc func didPressButton(sender: UIButton!) {
         DataPassing.shared.loaiBang = sender.currentTitle
     }
+    
+    //check button
     //Radio Button Event
     @objc func SellectButton(sender: UIButton!) {
         if sender.isSelected{
