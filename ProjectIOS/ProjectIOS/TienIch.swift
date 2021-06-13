@@ -35,7 +35,9 @@ class TienIch{
             
             let element:CauHoi = list[randomIndex];
             
-            if(true){
+            if(selected.contains(where: {
+                return ($0.cauHoi == element.cauHoi||$0.dapAn == element.dapAn || $0.cauTraLoi == element.cauTraLoi || $0.hinhAnh == element.hinhAnh)
+            })){
                 selected += [element];
             }
             
