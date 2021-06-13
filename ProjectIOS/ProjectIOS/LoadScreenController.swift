@@ -15,12 +15,15 @@ class LoadScreenController: UIViewController {
     public static let BANG_B1:String = "Bang B1";
     public static let BANG_B2_C_D_E_F:String = "Bang B2, C, D, E, F";
     
+    @IBOutlet weak var txtWarning: UILabel!
     var ref: DatabaseReference!
     var flag:Bool = true;
     var cauHoi:CauHoi = CauHoi();
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        print(InternetConnectionManager.isConnectedToNetwork());
+        if(InternetConnectionManager.isConnectedToNetwork()){
         ref = Database.database().reference();
         ref.observe(DataEventType.value, with: { [self] (snapshot) in
             let dataSnapshot = snapshot.value as? [String : AnyObject] ?? [:]
@@ -84,7 +87,9 @@ class LoadScreenController: UIViewController {
                 
             }
         })
-        
+        }else{
+            txtWarning.text = "Không có kết nối Internet!";
+        }
     }
 }
 
