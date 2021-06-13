@@ -12,4 +12,8 @@ class FirebaseData{
     public static var bangA3_A4:[CauHoi] = [];
     public static var bangB1:[CauHoi] = [];
     public static var bangB2_C_D_E_F:[CauHoi] = [];
+    
+    public static func getRandomCauHoiBangA1(){
+        
+    }
 }

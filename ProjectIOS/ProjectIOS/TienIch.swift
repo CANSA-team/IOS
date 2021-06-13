@@ -19,4 +19,28 @@ class TienIch{
         cauHoiObj = CauHoi(hinhAnh, cauHoi, cauTraLoi, dapAn);
         return cauHoiObj;
     }
+    
+    public static func selectRandomElements(_ list:[CauHoi],_ amount:Int,_ start:Int,_ end:Int)->[CauHoi]{
+        
+        if(amount >= list.count){
+            return list;
+        }
+        
+        var selected:[CauHoi] = [];
+        
+        while (selected.count < amount) {
+            var randomIndex:Int = -1;
+            
+            randomIndex = Int.random(in: start...end);
+            
+            let element:CauHoi = list[randomIndex];
+            
+            if(true){
+                selected += [element];
+            }
+            
+        }
+        
+        return selected;
+    }
 }
