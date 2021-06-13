@@ -13,7 +13,7 @@ target 'ProjectIOS' do
 	pod 'Firebase/Auth' 
 	pod 'Firebase/Firestore'
 	pod 'Firebase/Database'
-
+	pod 'Picasso', '~> 0.4.1'
 
   target 'ProjectIOSTests' do
     inherit! :search_paths
