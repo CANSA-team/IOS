@@ -29,7 +29,7 @@ class ScreenMainController: UIViewController,UICollectionViewDataSource,UICollec
     }
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
             let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "CollectionViewCell", for: indexPath) as! CollectionViewCell
-        cell.configButton(with: "License "+data[indexPath.row],with: img[indexPath.row])
+        cell.configButton(with: "License "+data[indexPath.row],with: img[indexPath.row]) //Đổ dữ liệu cho màn hình main cấu hình bên file CollectionViewCell
         cell.layer.borderColor = UIColor.black.cgColor
         cell.layer.borderWidth = 1
         cell.layer.cornerRadius = 8
