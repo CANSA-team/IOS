@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="TfT-X6-CaA">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="nrY-rT-SI3">
     <device id="retina5_5" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
@@ -108,7 +108,7 @@
                                     <inset key="sectionInset" minX="0.0" minY="10" maxX="0.0" maxY="10"/>
                                 </collectionViewFlowLayout>
                                 <cells>
-                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" semanticContentAttribute="forceLeftToRight" fixedFrame="YES" layoutMarginsFollowReadableWidth="YES" reuseIdentifier="CollectionViewCell" translatesAutoresizingMaskIntoConstraints="NO" id="MaR-ba-WMq" customClass="CollectionViewCell" customModule="ProjectIOS" customModuleProvider="target">
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" semanticContentAttribute="forceLeftToRight" layoutMarginsFollowReadableWidth="YES" reuseIdentifier="CollectionViewCell" translatesAutoresizingMaskIntoConstraints="NO" id="MaR-ba-WMq" customClass="CollectionViewCell" customModule="ProjectIOS" customModuleProvider="target">
                                         <rect key="frame" x="7" y="280" width="400" height="128"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
@@ -252,10 +252,10 @@
             </objects>
             <point key="canvasLocation" x="1802.8985507246377" y="66.84782608695653"/>
         </scene>
-        <!--Load Screen Controller-->
+        <!--View Controller-->
         <scene sceneID="d5t-0c-XeB">
             <objects>
-                <viewController id="TfT-X6-CaA" customClass="LoadScreenController" customModule="ProjectIOS" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="TfT-X6-CaA" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Cve-Nf-hHv">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -264,10 +264,10 @@
                                 <rect key="frame" x="10" y="10" width="394" height="716"/>
                                 <subviews>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="A2" translatesAutoresizingMaskIntoConstraints="NO" id="Ahk-Ev-ShJ">
-                                        <rect key="frame" x="0.0" y="0.0" width="394" height="620"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="394" height="636.66666666666663"/>
                                     </imageView>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="buW-Ld-crc">
-                                        <rect key="frame" x="0.0" y="620" width="394" height="96"/>
+                                        <rect key="frame" x="0.0" y="636.66666666666663" width="394" height="79.333333333333371"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
@@ -292,9 +292,6 @@
                             <constraint firstItem="uRc-a4-Wk3" firstAttribute="leading" secondItem="iKF-S3-IOx" secondAttribute="leading" constant="10" id="ytD-ba-iFU"/>
                         </constraints>
                     </view>
-                    <connections>
-                        <outlet property="txtWarning" destination="buW-Ld-crc" id="KOg-8d-FUe"/>
-                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="FlH-Pb-W4W" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

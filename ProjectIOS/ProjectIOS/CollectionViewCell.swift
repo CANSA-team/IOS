@@ -35,6 +35,7 @@ class CollectionViewCell: UICollectionViewCell {
         btnContent.addTarget(self,action: #selector(didPressButton(sender:)), for: .touchUpInside)
         
     }
+    
     //Đây là hàm đổ câu trả lời
     func ConfigQuestion(with str:String) {
         LableQuestion.text = str
@@ -46,19 +47,36 @@ class CollectionViewCell: UICollectionViewCell {
     @objc func didPressButton(sender: UIButton!) {
         //Khi click vào thì sẽ gán cho DataPassing
         DataPassing.shared.loaiBang = sender.currentTitle
+        
+        let loaiBang:String = sender.currentTitle ?? "";
+        
+        //MARK: tạo ra mảng câu hỏi theo từng loại bằng lưu vào màn hình câu hỏi
+        
+        //// tạo ra mảng câu hỏi theo từng loại bằng lưu vào DataPassing
+        //TienIch.CreateCauHoisByLoaiBangToDataPassing(loaiBang);
+        TienIch.CreateCauHoisByLoaiBangToQuestionController(loaiBang)
+        
+        DataPassing.countCauHois = DataPassing.cauHois.count;
+        DataPassing.results = TienIch.CreateResultsByCount(DataPassing.countCauHois);
+        
+        //MARK: tạo mảng câu đáp án theo số lượng câu hỏi lưu vào màn hình câu hỏi
+        let count = ScreenQuestionController.cauHois.count;
+        ScreenQuestionController.results = TienIch.CreateResultsByCount(count);
     }
     
     //check button
     //Set Sự kiện RadioButton cho những button câu trả lời
     @objc func SellectButton(sender: UIButton!) {
         if sender.isSelected{
-            sender.isSelected = false
+            sender.isSelected = false;
             
         }else{
-            sender.isSelected = true
+            sender.isSelected = true;
             for btn in DataPassing.shared.allButtons{
                 if btn != sender{
-                    btn.isSelected = false
+                    btn.isSelected = false;
+                }else{
+                    btn.isSelected = true;
                 }
             }
         }

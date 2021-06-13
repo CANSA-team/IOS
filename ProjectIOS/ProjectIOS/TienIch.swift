@@ -7,6 +7,8 @@
 
 import Foundation
 class TienIch{
+    
+    //MARK:tạo câu hỏi lấy từ FireBase
     static func createCauHoi(_ value:NSDictionary) -> CauHoi {
         let cauHoiObj:CauHoi;
         let hinhAnh = value["hinhAnh"] as? String ?? "";
@@ -20,6 +22,7 @@ class TienIch{
         return cauHoiObj;
     }
     
+    //MARK: lấy ngẫu nhiên câu hỏi theo từng loại đề
     public static func selectRandomElements(_ list:[CauHoi],_ amount:Int,_ start:Int,_ end:Int)->[CauHoi]{
         
         if(amount >= list.count){
@@ -45,6 +48,7 @@ class TienIch{
         return selected;
     }
     
+    //MARK: tạo mảng câu điểm liệt
     public static func RandomDeathPoints(_ n:Int,_ lengthCauHoi:Int) -> [Int]{
         var deathPoint:[Int] = [];
         while (deathPoint.count < n) {
@@ -58,6 +62,7 @@ class TienIch{
         return deathPoint;
     }
     
+    //MARK: kiểm tra kết quả đậu truợt
     public static func CheckResult(_ resultList:[Results],_ deathPoints:[Int],_ target:Int) -> Bool{
         var result:Bool = true;
         
@@ -75,6 +80,7 @@ class TienIch{
         return result;
     }
     
+    //MARK: đếm số lượng câu hỏi đúng
     public static func CountTrueChoseResult(_ resultList:[Results])->Int{
         var count:Int = 0;
         
@@ -87,6 +93,7 @@ class TienIch{
         return count
     }
     
+    //MARK: chuyển số thành chuỗi 00:00
     public static func ChangeTimeToString(_ time:Int) -> String{
         var result:String = "";
         var strSeconds:String = "";
@@ -103,6 +110,7 @@ class TienIch{
         return result;
     }
     
+    //MARK: chuyển chuỗi 00:00 thành số
     public static func ChangeStringToTime(_ str:String) -> Int{
         var result:Int = 0;
         var seconds:Int = 0;
@@ -118,13 +126,38 @@ class TienIch{
         return result;
     }
     
+    //MARK: tạo ra mảng đáp án mặc định tất cả đều sai theo số lượng câu hỏi từng loại bằng
     public static func CreateResultsByCount(_ count:Int) -> [Results]{
         var results:[Results] = [];
         
-        for i in 0..<count {
+        for _ in 0..<count {
             results += [Results()];
         }
         
         return results;
+    }
+    
+    //MARK: tạo ra mảng câu hỏi theo từng loại bằng lưu vào dataPassing
+    public static func CreateCauHoisByLoaiBangToDataPassing(_ loaiBang:String)->Void{
+        switch loaiBang {
+        case ScreenMainController.data[0]:
+            DataPassing.cauHois = FirebaseData.getRandomCauHoiBangA1();
+            break;
+        case ScreenMainController.data[1]:
+            DataPassing.cauHois = FirebaseData.getRandomCauHoiBangA2();
+            break;
+            
+        case ScreenMainController.data[3], ScreenMainController.data[2]:
+            DataPassing.cauHois = FirebaseData.getRandomCauHoiBangA3_A4();
+            break;
+        case ScreenMainController.data[4]:
+            DataPassing.cauHois = FirebaseData.getRandomCauHoiBangB1();
+            break;
+        case ScreenMainController.data[5],ScreenMainController.data[6],ScreenMainController.data[7],ScreenMainController.data[8],ScreenMainController.data[9]:
+            DataPassing.cauHois = FirebaseData.getRandomCauHoiBangB2_C_D_E_F();
+            break;
+        default:
+            break;
+        }
     }
 }

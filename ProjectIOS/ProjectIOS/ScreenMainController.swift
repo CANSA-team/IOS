@@ -9,15 +9,13 @@ import UIKit
 import Firebase
 
 class ScreenMainController: UIViewController,UICollectionViewDataSource,UICollectionViewDelegate{
-    private let data:[String] = ["A1","A2","A3","B1","B2","B3","D","E","F"] //Các loại bằng đổ ra main 
+    public static let data:[String] = ["A1","A2","A3","B1","B2","B3","D","E","F"] //Các loại bằng đổ ra main
     private let img:[String] = ["A1","A2","A3","B1","B2","B3","D","E","F"] //Đây là Hình Ảnh của các button
+    
     @IBOutlet weak var collectionView: UICollectionView!
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        var ref: DatabaseReference!
-        ref = Database.database().reference(withPath: "hello")
-        ref.setValue("World");
+
         // Do any additional setup after loading the view.
         // Create your custom collectionView.
         collectionView.dataSource = self
@@ -25,11 +23,12 @@ class ScreenMainController: UIViewController,UICollectionViewDataSource,UICollec
         self.view.backgroundColor = .purple //Set background của Main
     }
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return data.count
+        return ScreenMainController.data.count;
     }
+    
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
             let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "CollectionViewCell", for: indexPath) as! CollectionViewCell
-        cell.configButton(with: "License "+data[indexPath.row],with: img[indexPath.row]) //Đổ dữ liệu cho màn hình main cấu hình bên file CollectionViewCell
+        cell.configButton(with: ScreenMainController.data[indexPath.row],with: img[indexPath.row]) //Đổ dữ liệu cho màn hình main cấu hình bên file CollectionViewCell
         cell.layer.borderColor = UIColor.black.cgColor
         cell.layer.borderWidth = 1
         cell.layer.cornerRadius = 8
@@ -57,4 +56,3 @@ class ScreenMainController: UIViewController,UICollectionViewDataSource,UICollec
     }
     
 }
-

@@ -1,4 +1,4 @@
-//
+//. đối tượng câu hỏi
 //  CauHoi.swift
 //  ProjectIOS
 //

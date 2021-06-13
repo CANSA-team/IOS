@@ -7,16 +7,24 @@
 //
 
 import UIKit
-
+import Firebase
 
 
 class ScreenResultControllerCollectionViewController: UIViewController,UICollectionViewDataSource,UICollectionViewDelegate,UICollectionViewDelegateFlowLayout{
+    
+    private var resultStr:String = "";
+    private var totalResult:String = "";
     private let data:[String] = ["1","2","3","4","5","6","7","8","9","10","11"] // Đây là mảng câu số... title của các kết quả nằm ở dưới collectionView
     private let result:[Int] = [0,1,0,1,0,1,0,0,0,1,1] //Tương ứng với số câu ở trên đây là mảng chứa các đáp án 1 là đúng 0 là sai
 
     @IBOutlet weak var collectionView: UICollectionView!
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        //MARK: lưu kết quả lên firebase theo dạng "đậu" - "20/20"
+        var ref = Database.database().reference(withPath: "user's result");
+        ref.childByAutoId().setValue([resultStr:totalResult]);
+        
         // Do any additional setup after loading the view.
         // Create your custom collectionView.
         collectionView.dataSource = self

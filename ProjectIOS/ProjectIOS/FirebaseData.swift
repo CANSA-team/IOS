@@ -7,12 +7,14 @@
 
 import Foundation
 class FirebaseData{
+    //MARK: dữ liệu lưu lại khi lấy từ Firebase về
     public static var bangA1:[CauHoi] = [];
     public static var bangA2:[CauHoi] = [];
     public static var bangA3_A4:[CauHoi] = [];
     public static var bangB1:[CauHoi] = [];
     public static var bangB2_C_D_E_F:[CauHoi] = [];
     
+    //MARK: lấy ngẫu nghiên câu hỏi theo SRS bằng A1
     public static func getRandomCauHoiBangA1()->[CauHoi]{
         var cauHoiBangA1:[CauHoi] = [];
         
@@ -26,6 +28,7 @@ class FirebaseData{
         return cauHoiBangA1;
     }
     
+    //MARK: lấy ngẫu nghiên câu hỏi theo SRS bằng A2
     public static func getRandomCauHoiBangA2()->[CauHoi]{
         var cauHoiBangA2:[CauHoi] = [];
         
@@ -39,6 +42,7 @@ class FirebaseData{
         return cauHoiBangA2;
     }
     
+    //MARK: lấy ngẫu nghiên câu hỏi theo SRS bằng A3_A4
     public static func getRandomCauHoiBangA3_A4()->[CauHoi]{
         var cauHoiBangA3_A4:[CauHoi] = [];
         
@@ -53,6 +57,7 @@ class FirebaseData{
         return cauHoiBangA3_A4;
     }
     
+    //MARK: lấy ngẫu nghiên câu hỏi theo SRS bằng B1
     public static func getRandomCauHoiBangB1()->[CauHoi]{
         var cauHoiBangB1:[CauHoi] = [];
         
@@ -67,6 +72,7 @@ class FirebaseData{
         return cauHoiBangB1;
     }
     
+    //MARK: lấy ngẫu nghiên câu hỏi theo SRS bằng B2_C_D_E_F
     public static func getRandomCauHoiBangB2_C_D_E_F()->[CauHoi]{
         var cauHoiBangB2_C_D_E_F:[CauHoi] = [];
         

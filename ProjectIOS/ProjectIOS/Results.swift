@@ -1,4 +1,4 @@
-//
+//  đối tượng kết quả
 //  Results.swift
 //  ProjectIOS
 //

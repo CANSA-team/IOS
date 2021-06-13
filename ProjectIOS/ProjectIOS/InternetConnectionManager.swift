@@ -1,4 +1,4 @@
-//
+// kiểm tra kết nối Internet
 //  InternetConnectionManager.swift
 //  ProjectIOS
 //

@@ -9,11 +9,15 @@ import UIKit
 import Firebase
 
 class LoadScreenController: UIViewController {
+    //MARK: hằng sử dụng chung trong cả chương trình
+    public static let COUNTDOWN_BANG_A:String = "15:00";
+    public static let COUNTDOWN_BANG_B_C_D_E_F:String = "20:00";
     public static let BANG_A1:String = "Bang A1";
     public static let BANG_A2:String = "Bang A2";
     public static let BANG_A3_A4:String = "Bang A3,A4";
     public static let BANG_B1:String = "Bang B1";
     public static let BANG_B2_C_D_E_F:String = "Bang B2, C, D, E, F";
+    
     
     @IBOutlet weak var txtWarning: UILabel!
     var ref: DatabaseReference!
@@ -85,6 +89,8 @@ class LoadScreenController: UIViewController {
                 print(FirebaseData.bangB1.count);
                 print(FirebaseData.bangB2_C_D_E_F.count);
                 
+                let src = storyboard?.instantiateViewController(withIdentifier: "Main") as! ScreenMainController;
+                present(src, animated: false, completion: nil);
             }
         })
         }else{

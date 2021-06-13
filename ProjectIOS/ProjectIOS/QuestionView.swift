@@ -14,7 +14,9 @@ class QuestionView: UICollectionReusableView{
 
     func SetQuestion(with str:String,with img:String){
         self.Question.text = str //Set câu hỏi
-        self.image.image = UIImage(named: img) //Set Hình Ảnh câu hỏi
+        if(img.count > 0){
+            self.image.image = UIImage(named: img) //Set Hình Ảnh câu hỏi
+        }
     }
     
 }

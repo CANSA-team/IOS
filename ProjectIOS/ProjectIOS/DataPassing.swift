@@ -14,7 +14,11 @@ class DataPassing{
     var loaiBang:String? // Đây là file để trans data giữa main và QuestionController
     var allButtons = [UIButton]() // Đây là các nút button của các câu hỏi
     var collectionView:UICollectionView? //Cái này có thể sử dụng để lưu các dữ liệu của collectionView như kích thước bla bla
-    var count = 0 //Cái này để làm đếm trung gian 
+    var count = 0 //Cái này để làm đếm trung gian
+    var couHoi:CauHoi = CauHoi();
     
+    public static var cauHois:[CauHoi] = [];
+    public static var countCauHois:Int = 0;
+    public static var results:[Results] = [];
 }
 

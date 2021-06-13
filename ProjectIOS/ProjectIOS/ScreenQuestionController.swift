@@ -27,7 +27,8 @@ class ScreenQuestionController: UIViewController,UICollectionViewDataSource,UICo
         collectionView.delegate = self
         collectionView.reloadData()
         self.title = String(DataPassing.shared.count)+"/25" //Set Tittle
-        let time = UIBarButtonItem(title: "Time 25:25",
+        //MARK: để countdowwn -> dùng timer countdown, thời gian dùng hằng bên LoadScreenController
+        let time = UIBarButtonItem(title: "25:25",
                                        style: .done,
                                            target: nil,
                                            action: nil)
