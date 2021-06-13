@@ -28,6 +28,7 @@
 		98404CC62675C09E00BC08FD /* LoadScreenController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98404CC52675C09E00BC08FD /* LoadScreenController.swift */; };
 		98404CCC2675C0DC00BC08FD /* FirebaseData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98404CCB2675C0DC00BC08FD /* FirebaseData.swift */; };
 		98404CD42675C18600BC08FD /* TienIch.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98404CD32675C18600BC08FD /* TienIch.swift */; };
+		98694B872675D0F0003723D1 /* Results.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98694B862675D0F0003723D1 /* Results.swift */; };
 		CB5C715678CCF1CB9215A011 /* Pods_ProjectIOSTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8FAB77668A803C78AA017BB2 /* Pods_ProjectIOSTests.framework */; };
 		E2DF81FD643EB71CECF2063D /* Pods_ProjectIOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7F5428C0E8F9BAEDC8ED1B1C /* Pods_ProjectIOS.framework */; };
 /* End PBXBuildFile section */
@@ -81,6 +82,7 @@
 		98404CC52675C09E00BC08FD /* LoadScreenController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadScreenController.swift; sourceTree = "<group>"; };
 		98404CCB2675C0DC00BC08FD /* FirebaseData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseData.swift; sourceTree = "<group>"; };
 		98404CD32675C18600BC08FD /* TienIch.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TienIch.swift; sourceTree = "<group>"; };
+		98694B862675D0F0003723D1 /* Results.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Results.swift; sourceTree = "<group>"; };
 		A17A6E9CECCCBCF2B89F64AC /* Pods-ProjectIOS-ProjectIOSUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ProjectIOS-ProjectIOSUITests.release.xcconfig"; path = "Target Support Files/Pods-ProjectIOS-ProjectIOSUITests/Pods-ProjectIOS-ProjectIOSUITests.release.xcconfig"; sourceTree = "<group>"; };
 		C580D1C1F6C77D744AAD6F98 /* Pods-ProjectIOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ProjectIOS.debug.xcconfig"; path = "Target Support Files/Pods-ProjectIOS/Pods-ProjectIOS.debug.xcconfig"; sourceTree = "<group>"; };
 		D7CF7C262FBD602F755A4E09 /* Pods-ProjectIOSTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ProjectIOSTests.debug.xcconfig"; path = "Target Support Files/Pods-ProjectIOSTests/Pods-ProjectIOSTests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -195,6 +197,7 @@
 			children = (
 				7E4294B62629CF4D00A22CD5 /* CauHoi.swift */,
 				98404CD32675C18600BC08FD /* TienIch.swift */,
+				98694B862675D0F0003723D1 /* Results.swift */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -492,6 +495,7 @@
 				8C815E17266176F40095A7ED /* ScreenQuestionController.swift in Sources */,
 				8C815E19266177110095A7ED /* CollectionViewCell.swift in Sources */,
 				98404CD42675C18600BC08FD /* TienIch.swift in Sources */,
+				98694B872675D0F0003723D1 /* Results.swift in Sources */,
 				7E4294822629CEB200A22CD5 /* AppDelegate.swift in Sources */,
 				7E4294842629CEB200A22CD5 /* SceneDelegate.swift in Sources */,
 				8C815E15266176CF0095A7ED /* ScreenMainController.swift in Sources */,
