@@ -74,10 +74,15 @@ class LoadScreenController: UIViewController {
                         break;
                     }
                 }
+                
+                //chuyen man hinh
+                print(FirebaseData.bangA1.count);
+                print(FirebaseData.bangA2.count);
+                print(FirebaseData.bangA3_A4.count);
+                print(FirebaseData.bangB1.count);
+                print(FirebaseData.bangB2_C_D_E_F.count);
+                
             }
-            
-            //chuyen man hinh
-            print(FirebaseData.bangA1.count);
         })
         
     }
