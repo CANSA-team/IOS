@@ -15,6 +15,7 @@ class QuestionView: UICollectionReusableView{
     func SetQuestion(with str:String,with img:String){
         self.Question.text = str //Set câu hỏi
         if(img.count > 0){
+            //MARK: chỗ này load hình ảnh từ url, nếu biết xài picasso thì dùng, không thì tạo hàm load hình vê
             self.image.image = UIImage(named: img) //Set Hình Ảnh câu hỏi
         }
     }
