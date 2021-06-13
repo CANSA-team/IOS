@@ -117,4 +117,14 @@ class TienIch{
         
         return result;
     }
+    
+    public static func CreateResultsByCount(_ count:Int) -> [Results]{
+        var results:[Results] = [];
+        
+        for i in 0..<count {
+            results += [Results()];
+        }
+        
+        return results;
+    }
 }

@@ -11,6 +11,9 @@ class Results{
     var resource:Bool = false;
     var choses:Int = 0;
     
+    init() {
+        
+    }
     init(_ answeredIndex:Int,resource:Bool,choses:Int) {
         self.answeredIndex = answeredIndex;
         self.choses = choses;
