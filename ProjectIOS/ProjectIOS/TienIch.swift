@@ -38,7 +38,7 @@ class TienIch{
             
             let element:CauHoi = list[randomIndex];
             
-            if(!contain(element,selected)){
+            if(!containCauHoi(element,selected)){
                 selected += [element];
             }
         }
@@ -46,7 +46,7 @@ class TienIch{
         return selected;
     }
     
-    private static func contain(_ cauHoi:CauHoi,_ cauHois:[CauHoi])->Bool{
+    private static func containCauHoi(_ cauHoi:CauHoi,_ cauHois:[CauHoi])->Bool{
         var  result:Bool = false;
         
         for cauHoiItem in cauHois{
@@ -58,12 +58,13 @@ class TienIch{
         return result;
     }
     
+    
     //MARK: tạo mảng câu điểm liệt
     public static func RandomDeathPoints(_ n:Int,_ lengthCauHoi:Int) -> [Int]{
         var deathPoint:[Int] = [];
         while (deathPoint.count < n) {
             var randomIndex:Int = -1;
-            randomIndex = Int.random(in: 0...lengthCauHoi);
+            randomIndex = Int.random(in: 0..<lengthCauHoi);
             
             if (!deathPoint.contains(where: {return $0 == randomIndex})) {
                 deathPoint += [randomIndex]
@@ -73,16 +74,16 @@ class TienIch{
     }
     
     //MARK: kiểm tra kết quả đậu truợt
-    public static func CheckResult(_ resultList:[Results],_ deathPoints:[Int],_ target:Int) -> Bool{
-        var result:Bool = true;
+    public static func CheckResult(_ resultList:[Results],_ deathPoints:[Int],_ target:Int) -> String{
+        var result:String = LoadScreenController.SUCESS;
         
         if(CountTrueChoseResult(resultList) < target){
-            result = false
+            result = LoadScreenController.FAIL
         }
         
         for deathPoint in deathPoints {
             if(!resultList[deathPoint].resource){
-                result = false;
+                result = LoadScreenController.FAIL;
                 break;
             }
         }
@@ -115,7 +116,7 @@ class TienIch{
         strSeconds = strSeconds.count == 1 ? ("0"+strSeconds) : strSeconds;
         strMinutes = strMinutes.count == 1 ? ("0"+strMinutes) : strMinutes;
         
-        result = strMinutes + strSeconds;
+        result = strMinutes + ":" + strSeconds;
         
         return result;
     }
@@ -123,15 +124,13 @@ class TienIch{
     //MARK: chuyển chuỗi 00:00 thành số
     public static func ChangeStringToTime(_ str:String) -> Int{
         var result:Int = 0;
-        var seconds:Int = 0;
-        var minutes:Int = 0;
         
         let strs:[String] = str.components(separatedBy: [":"]);
         
-        seconds = strs[1] as! Int;
-        minutes = strs[2] as! Int;
-        
-        result = minutes + seconds;
+        if let seconds = Int(strs[1]),let minutes = Int(strs[0])
+        {
+            result = (minutes * 60) + seconds;
+        }
         
         return result;
     }

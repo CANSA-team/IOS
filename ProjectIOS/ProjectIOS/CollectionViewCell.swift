@@ -20,7 +20,6 @@ class CollectionViewCell: UICollectionViewCell {
     //Đây là hàm set kết quả cho màn hình Result
     func result(with result:Results){
         checkResult.setTitle("\(result.answeredIndex+1)", for: .normal)
-        dump(result.resource)
         if (result.resource == true){
             checkResult.setImage(UIImage(named: "true"), for: .normal)
             
@@ -34,7 +33,6 @@ class CollectionViewCell: UICollectionViewCell {
         btnContent.setTitle(str, for: .normal)
         btnContent.setImage(UIImage(named: img), for: .normal)
         btnContent.addTarget(self,action: #selector(didPressButton(sender:)), for: .touchUpInside)
-        
     }
     
     //Đây là hàm đổ câu trả lời
@@ -70,6 +68,7 @@ class CollectionViewCell: UICollectionViewCell {
         
         TienIch.CreateCauHoisByLoaiBangToDataPassing(loaiBang)
         
+        DataPassing.loaiBang = loaiBang;
         DataPassing.countCauHois = DataPassing.cauHois.count;
         DataPassing.results = TienIch.CreateResultsByCount(DataPassing.countCauHois);
         

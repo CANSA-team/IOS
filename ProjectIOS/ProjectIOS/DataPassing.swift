@@ -21,6 +21,7 @@ class DataPassing{
     public static var cauHois:[CauHoi] = [];
     public static var countCauHois:Int = 0;
     public static var results:[Results] = [];
+    public static var loaiBang:String = "";
     
     public static func removeDataAll(){
         shared.allButtons = [UIButton]()
@@ -28,6 +29,7 @@ class DataPassing{
         shared.couHoi = CauHoi()
         cauHois = []
         countCauHois = 0
+        results = []
     }
 }
 

@@ -67,7 +67,7 @@ class FirebaseData{
         cauHoiBangB1 += TienIch.selectRandomElements(bangB1, 2, 146, 170);
         cauHoiBangB1 += TienIch.selectRandomElements(bangB1, 1, 171, 225);
         cauHoiBangB1 += TienIch.selectRandomElements(bangB1, 9, 226, 325);
-        cauHoiBangB1 += TienIch.selectRandomElements(bangA1, 9, 326, 420);
+        cauHoiBangB1 += TienIch.selectRandomElements(bangB1, 9, 326, 420);
         
         return cauHoiBangB1;
     }

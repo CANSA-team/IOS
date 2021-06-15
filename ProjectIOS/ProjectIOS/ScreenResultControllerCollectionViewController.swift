@@ -14,15 +14,44 @@ class ScreenResultControllerCollectionViewController: UIViewController,UICollect
     
     private var resultStr:String = "";
     private var totalResult:String = "";
-    private let data:[String] = ["1","2","3","4","5","6","7","8","9","10","11"] // Đây là mảng câu số... title của các kết quả nằm ở dưới collectionView
-    private let result:[Int] = [0,1,0,1,0,1,0,0,0,1,1] //Tương ứng với số câu ở trên đây là mảng chứa các đáp án 1 là đúng 0 là sai
+    private var deathPoints:[Int] = [];
 
+    @IBSegueAction func ResultToQuestion(_ coder: NSCoder) -> ScreenQuestionController? {
+        DataPassing.removeDataAll();
+        
+        TienIch.CreateCauHoisByLoaiBangToDataPassing(DataPassing.loaiBang)
+        
+        DataPassing.countCauHois = DataPassing.cauHois.count;
+        DataPassing.results = TienIch.CreateResultsByCount(DataPassing.countCauHois);
+        
+        //MARK: tạo mảng câu đáp án theo số lượng câu hỏi lưu vào màn hình câu hỏi
+        let count = DataPassing.cauHois.count;
+        DataPassing.results = TienIch.CreateResultsByCount(count);
+        
+        let mainStoryBoard : UIStoryboard = UIStoryboard(name: "Main", bundle:nil)
+        
+        return nil
+    }
+    @IBSegueAction func ResultToMain(_ coder: NSCoder) -> ScreenMainController? {
+
+        DataPassing.removeDataAll();
+        
+        let mainStoryBoard : UIStoryboard = UIStoryboard(name: "Main", bundle:nil)
+        let homeView  = mainStoryBoard.instantiateViewController(withIdentifier: "Nav") as! UINavigationController
+        homeView.modalPresentationStyle = .fullScreen
+        return nil
+    }
     @IBOutlet weak var collectionView: UICollectionView!
     override func viewDidLoad() {
         super.viewDidLoad()
-        DataPassing.removeDataAll()
         //MARK: lưu kết quả lên firebase theo dạng "đậu" - "20/20"
-
+        
+        totalResult = "\(TienIch.CountTrueChoseResult(DataPassing.results))/\(DataPassing.results.count)";
+        getDeathPoints();
+        
+        var ref:DatabaseReference!
+        ref = Database.database().reference(withPath: "user's result");
+        ref.childByAutoId().setValue([resultStr:totalResult]);
         
         // Do any additional setup after loading the view.
         // Create your custom collectionView.
@@ -45,6 +74,41 @@ class ScreenResultControllerCollectionViewController: UIViewController,UICollect
         super.viewWillDisappear(animated)
         navigationController?.setNavigationBarHidden(false, animated: animated)
     }
+    //MARK: tạo ngẫu nhiên câu hỏi điểm liệt và kiểm tra kết quả theo loại bằng
+    func getDeathPoints(){
+        var n:Int = 0;
+        switch DataPassing.loaiBang {
+        case ScreenMainController.data[0]:
+            n = 1;
+            deathPoints = TienIch.RandomDeathPoints(n, DataPassing.results.count);
+            resultStr = TienIch.CheckResult(DataPassing.results, deathPoints, 16);
+            break;
+        case ScreenMainController.data[1]:
+            n = 1;
+            deathPoints = TienIch.RandomDeathPoints(n, DataPassing.results.count);
+            resultStr = TienIch.CheckResult(DataPassing.results, deathPoints, 18);
+            break;
+        case ScreenMainController.data[2],ScreenMainController.data[3]:
+            n = 2;
+            deathPoints = TienIch.RandomDeathPoints(n, DataPassing.results.count);
+            resultStr = TienIch.CheckResult(DataPassing.results, deathPoints, 18);
+            break;
+        case ScreenMainController.data[4]:
+            n = 3;
+            deathPoints = TienIch.RandomDeathPoints(n, DataPassing.results.count);
+            resultStr = TienIch.CheckResult(DataPassing.results, deathPoints, 26);
+            break;
+        case ScreenMainController.data[5],ScreenMainController.data[6],ScreenMainController.data[7],ScreenMainController.data[8],ScreenMainController.data[9]:
+            n = 3;
+            deathPoints = TienIch.RandomDeathPoints(n, DataPassing.results.count);
+            resultStr = TienIch.CheckResult(DataPassing.results, deathPoints, 28);
+            break;
+        default:
+            break
+        }
+        
+    }
+    
     //Set header Kết quả 
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return DataPassing.results.count
@@ -56,7 +120,8 @@ class ScreenResultControllerCollectionViewController: UIViewController,UICollect
             case UICollectionView.elementKindSectionHeader:
 
                 let headerView = collectionView.dequeueReusableSupplementaryView(ofKind: kind, withReuseIdentifier: "header", for: indexPath) as! ResultView
-                headerView.setResult(with: "Dau", with: "5/25") //Đây là dữ liệu cần đổ 
+                headerView.setResult(with: resultStr, with: totalResult) //Đây là dữ liệu cần đổ
+                
                 return headerView
         case UICollectionView.elementKindSectionFooter:
             let footerView = collectionView.dequeueReusableSupplementaryView(ofKind: kind, withReuseIdentifier: "footer", for: indexPath)

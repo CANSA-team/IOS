@@ -16,10 +16,14 @@ class QuestionView: UICollectionReusableView{
         self.Question.text = str //Set câu hỏi
         if(img.count > 0){
             let url = URL(string: img)
-            let data = try? Data(contentsOf: url!) //make sure your image in this url does exist, otherwise unwrap in a if let check / try-catch
+            if let data = try? Data(contentsOf: url!){ //make sure your image in this url does exist, otherwise unwrap in a if let check / try-catch
            
             //MARK: chỗ này load hình ảnh từ url, nếu biết xài picasso thì dùng, không thì tạo hàm load hình vê
-            self.image.image = UIImage(data: data!) //Set Hình Ảnh câu hỏi
+            
+            self.image.image = UIImage(data: data) //Set Hình Ảnh câu hỏi
+            }else{
+                self.image.image = UIImage()
+            }
         }else{
             self.image.image = UIImage()
         }

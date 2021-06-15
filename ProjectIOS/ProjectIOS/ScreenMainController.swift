@@ -9,8 +9,19 @@ import UIKit
 import Firebase
 
 class ScreenMainController: UIViewController,UICollectionViewDataSource,UICollectionViewDelegate{
-    public static let data:[String] = ["A1","A2","A3","B1","B2","B3","D","E","F"] //Các loại bằng đổ ra main
-    private let img:[String] = ["A1","A2","A3","B1","B2","B3","D","E","F"] //Đây là Hình Ảnh của các button
+    public static let data:[String] = ["A1","A2","A3","A4","B1","B2","B3","D","E","F"] //Các loại bằng đổ ra main
+    private let img:[String] = ["A1","A2","A3","A3","B1","B2","B3","D","E","F"] //Đây là Hình Ảnh của các button
+    
+    //Để Hidden Navigation
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        navigationController?.setNavigationBarHidden(true, animated: animated)
+    }
+
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        navigationController?.setNavigationBarHidden(false, animated: animated)
+    }
     
     @IBOutlet weak var collectionView: UICollectionView!
     override func viewDidLoad() {
@@ -27,6 +38,7 @@ class ScreenMainController: UIViewController,UICollectionViewDataSource,UICollec
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+    
             let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "CollectionViewCell", for: indexPath) as! CollectionViewCell
         cell.configButton(with: ScreenMainController.data[indexPath.row],with: img[indexPath.row]) //Đổ dữ liệu cho màn hình main cấu hình bên file CollectionViewCell
         cell.layer.borderColor = UIColor.black.cgColor

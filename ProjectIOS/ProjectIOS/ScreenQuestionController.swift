@@ -8,58 +8,82 @@
 import UIKit
 
 class ScreenQuestionController: UIViewController,UICollectionViewDataSource,UICollectionViewDelegate,UICollectionViewDelegateFlowLayout {
-    var cauHoiDemo:String = "" //Khởi tạo các câu hỏi có gía trị rỗng
-    var data:[String] = [] //Đây là mảng câu hỏi
+    var cauHoi:String = ""
+    var data:[String] = []
     var img:String = ""
     var cauHoiCount : Int = -1
     var time:UIBarButtonItem = UIBarButtonItem()
     var flagTime:Bool = true
+    var timeStr:String = "";
+    var countdownTime:Int = 0;
+    var back:UIBarButtonItem = UIBarButtonItem();
+    
     @IBOutlet weak var collectionView: UICollectionView!
     override func viewDidLoad() {
         super.viewDidLoad()
         DataPassing.shared.countresult = 0
-        cauHoiDemo = DataPassing.cauHois[DataPassing.shared.count].getCauHoi() //Đây là câu hỏi demo
+        cauHoi = DataPassing.cauHois[DataPassing.shared.count].getCauHoi()
         img = DataPassing.cauHois[DataPassing.shared.count].getHinhAnh()
-        data = DataPassing.cauHois[DataPassing.shared.count].getCauTraLoi()//Đây là câu hỏi demo DataPassing.shared.count để biểu diễn thay đổi giữa Datapassing và controller
+        data = DataPassing.cauHois[DataPassing.shared.count].getCauTraLoi()
         cauHoiCount = DataPassing.cauHois.count
         DataPassing.shared.couHoi = DataPassing.cauHois[DataPassing.shared.count]
-        //Dua vao count de tim trong mang passing
-        // Do any additional setup after loading the view.
-        // Create your custom collectionView.
         
         collectionView.dataSource = self
         collectionView.delegate = self
         collectionView.reloadData()
         
-        self.title = String(DataPassing.shared.count+1)+"/"+String( cauHoiCount) //Set Tittle
+        
+        self.title = "\(DataPassing.shared.count+1)/\(cauHoiCount)  \(DataPassing.loaiBang)" //Set Tittle
         //MARK: để countdowwn -> dùng timer countdown, thời gian dùng hằng bên LoadScreenController
             
         let layout = collectionView.collectionViewLayout as? UICollectionViewFlowLayout // casting is required because UICollectionViewLayout doesn't offer header pin. Its feature of UICollectionViewFlowLayout
         layout?.sectionHeadersPinToVisibleBounds = true
         layout?.sectionFootersPinToVisibleBounds = true
-        var count1 = 0;
+        
         if(flagTime)
         {
+            self.getTime();
             TienIch.CreateResultsByCount(cauHoiCount)
             Timer.scheduledTimer(withTimeInterval: 1.0, repeats: true) { (Timer) in
-                count1 += 1
-                if(count1 == 1000)
+                self.countdownTime = TienIch.ChangeStringToTime(self.timeStr);
+                self.countdownTime -= 1;
+                if(self.countdownTime == 0)
                 {
                     Timer.invalidate()
                     self.performSegue(withIdentifier: "resultScreen", sender: nil)
                 }
-                    self.time = UIBarButtonItem(title: String(count1),
+                self.timeStr = TienIch.ChangeTimeToString(self.countdownTime);
+                self.time = UIBarButtonItem(title: self.timeStr,
                 style: .done,
                     target: nil,
                     action: nil)
                 self.time.isEnabled = true
                 self.navigationItem.rightBarButtonItem = self.time
                 }
+            
+            self.back = UIBarButtonItem(title: "Back",
+                                        style: .plain,
+                                        target: self,
+                                        action: #selector(BackButton(sender:)))
+            
+            self.navigationItem.leftBarButtonItem = back
             flagTime = false
         }
-        
     }
     
+    @objc func BackButton(sender: UIBarButtonItem!) {
+        self.performSegue(withIdentifier: "backMain", sender: nil)
+    }
+    
+    //MARK: lấy thời gian của loại bằng
+    func getTime(){
+        switch DataPassing.loaiBang {
+        case ScreenMainController.data[0],ScreenMainController.data[1],ScreenMainController.data[2],ScreenMainController.data[3]:
+            self.timeStr = LoadScreenController.COUNTDOWN_BANG_A;
+        default:
+            self.timeStr = LoadScreenController.COUNTDOWN_BANG_A;
+        }
+    }
     
     //Event của 2 nút button trái phải
     
@@ -95,7 +119,7 @@ class ScreenQuestionController: UIViewController,UICollectionViewDataSource,UICo
             case UICollectionView.elementKindSectionHeader:
 
                 let headerView = collectionView.dequeueReusableSupplementaryView(ofKind: kind, withReuseIdentifier: "header", for: indexPath) as! QuestionView
-                headerView.SetQuestion(with: cauHoiDemo,with: img) //Set Cau hoi,có thế custorm func SetQuestion ở bên File QuestionView
+                headerView.SetQuestion(with: cauHoi,with: img) //Set Cau hoi,có thế custorm func SetQuestion ở bên File QuestionView
                 return headerView
 
             case UICollectionView.elementKindSectionFooter:
@@ -109,9 +133,7 @@ class ScreenQuestionController: UIViewController,UICollectionViewDataSource,UICo
             }
         return UICollectionReusableView()
     }
-    func changeQuestion(){
-        
-    }
+
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, referenceSizeForHeaderInSection section: Int) -> CGSize {
         let width = view.frame.size.width - 22
         return CGSize(width: width - 16, height: 200)
