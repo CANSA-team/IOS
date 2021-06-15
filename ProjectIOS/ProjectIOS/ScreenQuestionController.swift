@@ -32,7 +32,7 @@ class ScreenQuestionController: UIViewController,UICollectionViewDataSource,UICo
         collectionView.delegate = self
         collectionView.reloadData()
         
-        
+        //MARK: hiện loại bằng
         self.title = "\(DataPassing.shared.count+1)/\(cauHoiCount)  \(DataPassing.loaiBang)" //Set Tittle
         //MARK: để countdowwn -> dùng timer countdown, thời gian dùng hằng bên LoadScreenController
             
