@@ -79,7 +79,7 @@ class FirebaseData{
         cauHoiBangB2_C_D_E_F += TienIch.selectRandomElements(bangB2_C_D_E_F, 1, 1, 21);
         cauHoiBangB2_C_D_E_F += TienIch.selectRandomElements(bangB2_C_D_E_F, 7, 22, 131);
         cauHoiBangB2_C_D_E_F += TienIch.selectRandomElements(bangB2_C_D_E_F, 1, 132, 145);
-        cauHoiBangB2_C_D_E_F += TienIch.selectRandomElements(bangB2_C_D_E_F, 2, 146, 175);
+        cauHoiBangB2_C_D_E_F += TienIch.selectRandomElements(bangB2_C_D_E_F, 1, 146, 175);
         cauHoiBangB2_C_D_E_F += TienIch.selectRandomElements(bangB2_C_D_E_F, 1, 176, 200);
         cauHoiBangB2_C_D_E_F += TienIch.selectRandomElements(bangB2_C_D_E_F, 1, 201, 255);
         cauHoiBangB2_C_D_E_F += TienIch.selectRandomElements(bangB2_C_D_E_F, 9, 256, 355);

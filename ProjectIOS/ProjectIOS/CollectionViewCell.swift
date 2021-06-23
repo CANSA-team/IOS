@@ -69,12 +69,18 @@ class CollectionViewCell: UICollectionViewCell {
         TienIch.CreateCauHoisByLoaiBangToDataPassing(loaiBang)
         
         DataPassing.loaiBang = loaiBang;
+        dump(DataPassing.loaiBang)
         DataPassing.countCauHois = DataPassing.cauHois.count;
         DataPassing.results = TienIch.CreateResultsByCount(DataPassing.countCauHois);
         
         //MARK: tạo mảng câu đáp án theo số lượng câu hỏi lưu vào màn hình câu hỏi
         let count = DataPassing.cauHois.count;
         DataPassing.results = TienIch.CreateResultsByCount(count);
+        dump(LoadScreenController.navigationController)
+        let main = LoadScreenController.storyboard?.instantiateViewController(withIdentifier: "Main") as! ScreenMainController
+        let question = LoadScreenController.storyboard?.instantiateViewController(withIdentifier: "Question") as! ScreenQuestionController
+        LoadScreenController.navigationController.setViewControllers([main,question], animated: true)
+        
     }
     
     //check button

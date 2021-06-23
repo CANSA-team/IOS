@@ -9,6 +9,7 @@ import UIKit
 import Firebase
 
 class LoadScreenController: UIViewController {
+    
     //MARK: hằng sử dụng chung trong cả chương trình
     public static let COUNTDOWN_BANG_A:String = "15:00";
     public static let COUNTDOWN_BANG_B_C_D_E_F:String = "20:00";
@@ -19,14 +20,18 @@ class LoadScreenController: UIViewController {
     public static let BANG_B2_C_D_E_F:String = "Bang B2, C, D, E, F";
     public static let SUCESS:String = "Đậu";
     public static let FAIL:String = "Trượt";
-    
+    public static var navigationController:UINavigationController!
+    public static var storyboard:UIStoryboard?
     @IBOutlet weak var txtWarning: UILabel!
     var ref: DatabaseReference!
     var flag:Bool = true;
     var cauHoi:CauHoi = CauHoi();
-    
+
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        LoadScreenController.navigationController = navigationController
+        LoadScreenController.storyboard = storyboard
         if(InternetConnectionManager.isConnectedToNetwork()){
         ref = Database.database().reference();
         ref.observe(DataEventType.value, with: { [self] (snapshot) in
@@ -83,10 +88,10 @@ class LoadScreenController: UIViewController {
                 }
                 
                 //chuyen man hinh
-                let mainStoryBoard : UIStoryboard = UIStoryboard(name: "Main", bundle:nil)
-                let homeView  = mainStoryBoard.instantiateViewController(withIdentifier: "Nav") as! UINavigationController
-                homeView.modalPresentationStyle = .fullScreen
-                self.present(homeView, animated: true, completion: nil)
+                let main = LoadScreenController.storyboard?.instantiateViewController(withIdentifier: "Main") as! ScreenMainController
+                LoadScreenController.navigationController.setViewControllers([main], animated: true)
+                
+                
             }
         })
         }else{

@@ -33,6 +33,7 @@ class ScreenQuestionController: UIViewController,UICollectionViewDataSource,UICo
         collectionView.reloadData()
         
         //MARK: hiện loại bằng
+        print(DataPassing.loaiBang)
         self.title = "\(DataPassing.shared.count+1)/\(cauHoiCount)  \(DataPassing.loaiBang)" //Set Tittle
         //MARK: để countdowwn -> dùng timer countdown, thời gian dùng hằng bên LoadScreenController
             
@@ -50,7 +51,8 @@ class ScreenQuestionController: UIViewController,UICollectionViewDataSource,UICo
                 if(self.countdownTime == 0)
                 {
                     Timer.invalidate()
-                    self.performSegue(withIdentifier: "resultScreen", sender: nil)
+                    let result = LoadScreenController.storyboard?.instantiateViewController(withIdentifier: "Result") as! ScreenResultControllerCollectionViewController
+                    LoadScreenController.navigationController.setViewControllers([result], animated: true)
                 }
                 self.timeStr = TienIch.ChangeTimeToString(self.countdownTime);
                 self.time = UIBarButtonItem(title: self.timeStr,
@@ -61,20 +63,12 @@ class ScreenQuestionController: UIViewController,UICollectionViewDataSource,UICo
                 self.navigationItem.rightBarButtonItem = self.time
                 }
             
-            self.back = UIBarButtonItem(title: "Back",
-                                        style: .plain,
-                                        target: self,
-                                        action: #selector(BackButton(sender:)))
-            
-            self.navigationItem.leftBarButtonItem = back
+           
             flagTime = false
         }
     }
     
-    @objc func BackButton(sender: UIBarButtonItem!) {
-        self.performSegue(withIdentifier: "backMain", sender: nil)
-    }
-    
+
     //MARK: lấy thời gian của loại bằng
     func getTime(){
         switch DataPassing.loaiBang {
@@ -109,6 +103,12 @@ class ScreenQuestionController: UIViewController,UICollectionViewDataSource,UICo
         }
         self.viewDidLoad()
     }
+    //MARK: Nut ket thuc
+    @IBAction func finishBtn(_ sender: Any) {
+        let result = LoadScreenController.storyboard?.instantiateViewController(withIdentifier: "Result") as! ScreenResultControllerCollectionViewController
+        LoadScreenController.navigationController.setViewControllers([result], animated: true)
+    }
+    
     //MARK: Check Cau hoi
   
     //Set câu hỏi

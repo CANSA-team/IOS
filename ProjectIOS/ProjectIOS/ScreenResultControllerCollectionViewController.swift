@@ -16,7 +16,8 @@ class ScreenResultControllerCollectionViewController: UIViewController,UICollect
     private var totalResult:String = "";
     private var deathPoints:[Int] = [];
 
-    @IBSegueAction func ResultToQuestion(_ coder: NSCoder) -> ScreenQuestionController? {
+  
+    @IBAction func btnQuestionReturn(_ sender: Any) {
         DataPassing.removeDataAll();
         
         TienIch.CreateCauHoisByLoaiBangToDataPassing(DataPassing.loaiBang)
@@ -27,20 +28,19 @@ class ScreenResultControllerCollectionViewController: UIViewController,UICollect
         //MARK: tạo mảng câu đáp án theo số lượng câu hỏi lưu vào màn hình câu hỏi
         let count = DataPassing.cauHois.count;
         DataPassing.results = TienIch.CreateResultsByCount(count);
-        
-        let mainStoryBoard : UIStoryboard = UIStoryboard(name: "Main", bundle:nil)
-        
-        return nil
+        let main = LoadScreenController.storyboard?.instantiateViewController(withIdentifier: "Main") as! ScreenMainController
+        let question = LoadScreenController.storyboard?.instantiateViewController(withIdentifier: "Question") as! ScreenQuestionController
+        LoadScreenController.navigationController.setViewControllers([main,question], animated: true)
     }
-    @IBSegueAction func ResultToMain(_ coder: NSCoder) -> ScreenMainController? {
+    
+    @IBAction func homeBtn(_ sender: Any) {
+            DataPassing.removeDataAll();
+            
+        let main = LoadScreenController.storyboard?.instantiateViewController(withIdentifier: "Main") as! ScreenMainController
+        LoadScreenController.navigationController.setViewControllers([main], animated: true)
 
-        DataPassing.removeDataAll();
-        
-        let mainStoryBoard : UIStoryboard = UIStoryboard(name: "Main", bundle:nil)
-        let homeView  = mainStoryBoard.instantiateViewController(withIdentifier: "Nav") as! UINavigationController
-        homeView.modalPresentationStyle = .fullScreen
-        return nil
     }
+    
     @IBOutlet weak var collectionView: UICollectionView!
     override func viewDidLoad() {
         super.viewDidLoad()
