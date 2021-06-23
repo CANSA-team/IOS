@@ -89,8 +89,8 @@ class LoadScreenController: UIViewController {
                 
                 //chuyen man hinh
                 let main = LoadScreenController.storyboard?.instantiateViewController(withIdentifier: "Main") as! ScreenMainController
-                LoadScreenController.navigationController.setViewControllers([main], animated: true)
                 
+                LoadScreenController.navigationController.setViewControllers([main], animated: true)
                 
             }
         })

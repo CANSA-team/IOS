@@ -416,7 +416,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="0VK-dM-ly8" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1802.8985507246377" y="787.50000000000011"/>
+            <point key="canvasLocation" x="3542" y="67"/>
         </scene>
         <!--Load Screen Controller-->
         <scene sceneID="PUh-QW-KbY">
@@ -430,10 +430,10 @@
                                 <rect key="frame" x="10" y="10" width="394" height="716"/>
                                 <subviews>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="A2" translatesAutoresizingMaskIntoConstraints="NO" id="xLA-Fq-WlY" customClass="Load">
-                                        <rect key="frame" x="0.0" y="0.0" width="394" height="529.33333333333337"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="394" height="524.66666666666663"/>
                                     </imageView>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="b8W-6h-L3q">
-                                        <rect key="frame" x="0.0" y="529.33333333333337" width="394" height="186.66666666666663"/>
+                                        <rect key="frame" x="0.0" y="524.66666666666663" width="394" height="191.33333333333337"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
@@ -462,7 +462,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ht0-iS-a8Z" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="813.04347826086962" y="66.84782608695653"/>
+            <point key="canvasLocation" x="1090" y="67"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="aii-KC-CfG">
@@ -482,7 +482,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="MNo-pG-nTj" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-94.20289855072464" y="66.84782608695653"/>
+            <point key="canvasLocation" x="162" y="67"/>
         </scene>
     </scenes>
     <resources>
